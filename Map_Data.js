@@ -2370,7 +2370,7 @@ function getStateData () {
             "2019_25-44_bachelor": "35.10%"
         },
         {
-            "State": "District of Columbia",
+            "State": "District_of_Columbia",
             "2008_female": "53.1%",
             "2009_female": "53.0%",
             "2010_female": "53.3%",
@@ -8586,7 +8586,7 @@ function getStateData () {
             "2019_25-44_bachelor": "25.40%"
         },
         {
-            "State": "New Hampshire",
+            "State": "New_Hampshire",
             "2008_female": "50.8%",
             "2009_female": "50.5%",
             "2010_female": "50.9%",
@@ -8882,7 +8882,7 @@ function getStateData () {
             "2019_25-44_bachelor": "42.40%"
         },
         {
-            "State": "New Jersey",
+            "State": "New_Jersey",
             "2008_female": "51.2%",
             "2009_female": "51.2%",
             "2010_female": "51.6%",
@@ -9178,7 +9178,7 @@ function getStateData () {
             "2019_25-44_bachelor": "48.10%"
         },
         {
-            "State": "New Mexico",
+            "State": "New_Mexico",
             "2008_female": "51.2%",
             "2009_female": "51.4%",
             "2010_female": "51.1%",
@@ -9474,7 +9474,7 @@ function getStateData () {
             "2019_25-44_bachelor": "25.50%"
         },
         {
-            "State": "New York",
+            "State": "New_York",
             "2008_female": "51.7%",
             "2009_female": "51.6%",
             "2010_female": "51.8%",
@@ -9770,7 +9770,7 @@ function getStateData () {
             "2019_25-44_bachelor": "45.60%"
         },
         {
-            "State": "North Carolina",
+            "State": "North_Carolina",
             "2008_female": "51.7%",
             "2009_female": "51.8%",
             "2010_female": "51.9%",
@@ -10066,7 +10066,7 @@ function getStateData () {
             "2019_25-44_bachelor": "36.00%"
         },
         {
-            "State": "North Dakota",
+            "State": "North_Dakota",
             "2008_female": "49.9%",
             "2009_female": "51.0%",
             "2010_female": "49.4%",
@@ -11546,7 +11546,7 @@ function getStateData () {
             "2019_25-44_bachelor": "39.50%"
         },
         {
-            "State": "Rhode Island",
+            "State": "Rhode_Island",
             "2008_female": "52.1%",
             "2009_female": "51.6%",
             "2010_female": "51.7%",
@@ -11842,7 +11842,7 @@ function getStateData () {
             "2019_25-44_bachelor": "40.50%"
         },
         {
-            "State": "South Carolina",
+            "State": "South_Carolina",
             "2008_female": "51.9%",
             "2009_female": "52.1%",
             "2010_female": "52.1%",
@@ -12138,7 +12138,7 @@ function getStateData () {
             "2019_25-44_bachelor": "32.00%"
         },
         {
-            "State": "South Dakota",
+            "State": "South_Dakota",
             "2008_female": "50.3%",
             "2009_female": "50.5%",
             "2010_female": "49.9%",
@@ -14210,7 +14210,7 @@ function getStateData () {
             "2019_25-44_bachelor": "39.90%"
         },
         {
-            "State": "West Virginia",
+            "State": "West_Virginia",
             "2008_female": "51.3%",
             "2009_female": "51.0%",
             "2010_female": "51.1%",
@@ -15098,4 +15098,4 @@ function getStateData () {
             "2019_25-44_bachelor": "29.80%"
         }
     ];
-    }
+}

@@ -1,10 +1,14 @@
 #us-map{
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  /*display: inline-block;*/
+  /*display: flex;
+  position: absolute;*/
+  position: fixed;
+  top: 50;
+  left: 50;
+  width: 80%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
 }
 path:hover, circle:hover {
   stroke: #002868 !important;
@@ -29,4 +33,76 @@ path:hover, circle:hover {
   /*border-radius: 5px;*/
   padding: 5px;
   font-family: arial;
+}
+
+#gradient {
+  /*display: block;*/
+  position: relative;
+  top: 500;
+  left: 0;
+  /*height: 50px;*/
+  /*width: 100%;
+  height: 10%;*/
+  background-color: rgb(90, 210, 230); /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, rgb(90, 210, 230),	rgb(10, 70, 110))
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  position: fixed;
+  top: 50;
+  left: 0;
+}
+
+.dropdown{
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown-menu{
+  width: 50;
+  height: 10;
 }
