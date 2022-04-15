@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>W3.CSS Template</title>
+  <title>Interactive Map Creator</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -16,12 +16,14 @@
 
     .bgimg {
       background-position: center;
-      background-size: cover;
-      background-image: url("/w3images/coffeehouse.jpg");
-      min-height: 75%;
+      background-size: auto 85%;
+      /*background-size: cover;*/
+      background-repeat: no-repeat;
+      background-image: url("mapScreenshot.png");
+      min-height: 100%;
     }
     #mylink, #menuheading {
-      width: 20%;
+      width: 33%;
     }
 
     .menu {
@@ -42,10 +44,10 @@
         <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
       </div>
       <div class="w3-col s3">
-        <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+        <a href="#menu" class="w3-button w3-block w3-black">SOCIAL DEMOGRAPHICS</a>
       </div>
       <div class="w3-col s3">
-        <a href="index.html" class="w3-button w3-block w3-black">THE MAP</a>
+        <a href="map.html" class="w3-button w3-block w3-black">THE MAP</a>
       </div>
     </div>
   </div>
@@ -64,23 +66,23 @@
     <div class="w3-container" id="about">
       <div class="w3-content" style="max-width:700px">
         <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE INTERACTIVE MAP</span></h5>
-        <p>Geographic information is difficult to intuitively understand, but by utilizing visualization
+        <p><span style="background-color: #FFFF00">Social scientists</span>HIGHLIGHT MORE deal with a lot of geographic information is difficult to intuitively understand, but by utilizing visualization
           tools like interactive maps, geographic data can be examined in an easily processable format to
           develop new research questions and see relationships.</p>
-        <p>This interactive map can display a large dataset of 30 different basic demographics listed
+        <p>This interactive map can display a large dataset of 30 different basic social demographic metrics, like gender and violent crime rate, that I gathered from various reliable sources, like the US Census Bureau HYPERLINK<link>(https://www.census.gov/)</link> and the FBI UCR (https://www.fbi.gov/services/cjis/ucr/publications), listed
           below and can additionally display part of a professionally gathered dataset on crowdfunding.
           Enjoy!
         </p>
       </div>
-      <!--CHANGE TO OWN IMAGE OF DEFAULT MAP WITHOUT VARIABLES-->
-      <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tutorial</span></h5>
     </div>
+
 
     <!-- Menu Container -->
     <div class="w3-container" id="menu">
       <div class="w3-content" style="max-width:700px">
 
-        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE DEMOGRAPHICS</span></h5>
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SOCIAL DEMOGRAPHICS</span></h5>
 
         <div class="w3-row w3-center w3-card w3-padding">
           <a href="javascript:void(0)" onclick="openMenu(event, 'Gender');" id="myLink">
@@ -92,12 +94,27 @@
           <a href="javascript:void(0)" onclick="openMenu(event, 'Age');">
             <div class="w3-col s6 tablink" id="menuheading">Age</div>
           </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Violent Crime');">
+            <div class="w3-col s6 tablink" id="menuheading">Violent Crime</div>
+          </a>
+          <!--number or per 100,000-->
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Property Crime');">
+            <div class="w3-col s6 tablink" id="menuheading">Property Crime</div>
+          </a>
+          <hr style="color:black" />
           <a href="javascript:void(0)" onclick="openMenu(event, 'Citizenship Status');">
             <div class="w3-col s6 tablink" id="menuheading">Citizenship Status</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Financial Status');">
+            <div class="w3-col s6 tablink" id="menuheading">Financial Status</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Employment Status');">
+            <div class="w3-col s6 tablink" id="menuheading">Employment Status</div>
           </a>
           <a href="javascript:void(0)" onclick="openMenu(event, 'Education Level');">
             <div class="w3-col s6 tablink" id="menuheading">Education Level</div>
           </a>
+          <!--22-44 or normal-->
         </div>
 
         <div id="Gender" class="w3-container menu w3-padding-48 w3-card">
@@ -123,6 +140,18 @@
           <h5>65+</h5>
         </div>
 
+        <div id="Violent Crime" class="w3-container menu w3-padding-48 w3-card">
+          <p class="w3-text-grey">Statistics can be shown in either <em class="w3-text-black">cases per 100,000 people</em> or <em class="w3-text-black">number</em></p>
+          <h5>0-18</h5>
+          <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p>
+          <h5>0-18</h5>
+          <h5>19-25</h5>
+          <h5>26-34</h5>
+          <h5>35-54</h5>
+          <h5>55-64</h5>
+          <h5>65+</h5>
+        </div>
+
         <div id="Citizenship Status" class="w3-container menu w3-padding-48 w3-card">
           <h5>Citizen</h5>
           <h5>Non-Citizen</h5>
@@ -131,6 +160,26 @@
         <div id="Education Level" class="w3-container menu w3-padding-48 w3-card">
           <h5>High School</h5>
           <h5>Bachelor's Degree</h5>
+        </div>
+      </div>
+    </div>
+
+    <p>paragraph explaining social scientist data</p>
+
+    <div class="w3-container" id="menu">
+      <div class="w3-content" style="max-width:700px">
+
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SOCIAL SCIENTIST DATA</span></h5>
+
+        <div class="w3-row w3-center w3-card w3-padding">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Crowdfunding (Demo)');">
+            <div class="w3-col s6 tablink" id="menuheading">Crowdfunding (Demo)</div>
+          </a>
+        </div>
+
+        <div id="Crowdfunding (Demo)" class="w3-container menu w3-padding-48 w3-card">
+          <h5></h5>
+          <!---->
         </div>
       </div>
     </div>
@@ -161,7 +210,7 @@
     document.getElementById("myLink").click();
 
     function mapFunction() {
-      location.href = 'index.html';
+      location.href = 'map.html';
     }
   </script>
 
