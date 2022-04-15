@@ -14,6 +14,7 @@ h1 {
 #finstatus,
 #empstatus,
 #edulevel,
+#edulevel25-44,
 #crowdfunding,
 #crowdfundingnum,
 #genderdropdown,
@@ -27,6 +28,7 @@ h1 {
 #finstatusdropdown,
 #empstatusdropdown,
 #eduleveldropdown,
+#edulevel25-44dropdown,
 #crowdfundingdropdown,
 #crowdfundingnumdropdown,
 
@@ -35,11 +37,15 @@ h1 {
 #year3text,
 #year4text,
 #year5text,
+#year6text,
+#year7text,
 #year1,
 #year2,
 #year3,
 #year4,
 #year5,
+#year6,
+#year7,
 #generatebutton {
   display: none;
   top: 0px;

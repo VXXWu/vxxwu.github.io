@@ -183,6 +183,7 @@
 			<option value="finstatus">Financial Status</option>
 			<option value="empstatus">Employment Status</option>
 			<option value="edulevel">Education Level</option>
+			<option value="edulevel25-44">Education Level (25-44)</option>
 			<option value="crowdfunding">Crowdfunding (Demo)</option>
 		</select>
 
@@ -301,6 +302,15 @@
 			<option value="">-- Select an Education Level --</option>
 			<option value="high_school">High School</option>
 			<option value="bachelor">Bachelor's Degree</option>
+		</select>
+
+		<label for="edulevel25-44">
+			<h3 id="edulevel25-44">Specific Education Level (25-44):</h3>
+		</label>
+		<select name="edulevel25-44dropdown" id="edulevel25-44dropdown" onchange="setSpecific();">
+			<option value="">-- Select an Education Level --</option>
+			<option value="25-44_high_school">High School</option>
+			<option value="25-44_bachelor">Bachelor's Degree</option>
 		</select>
 
 		<label for="crowdfunding">
@@ -479,6 +489,67 @@
 			<option>2021</option>
 		</select>
 
+
+		<label for="year5text">
+			<h3 id="year5text">Year:</h3>
+		</label>
+		<select name="year5" id="year5" onchange="setYear();">
+			<option value="">-- Choose a Year --</option>
+			<option>2009</option>
+			<option>2010</option>
+			<option>2011</option>
+			<option>2012</option>
+			<option>2013</option>
+			<option>2014</option>
+			<option>2015</option>
+			<option>2016</option>
+			<option>2017</option>
+			<option>2018</option>
+			<option>2019</option>
+			<option>2020</option>
+			<option>2021</option>
+		</select>
+
+		<label for="year6text">
+			<h3 id="year6text">Year:</h3>
+		</label>
+		<select name="year6" id="year6" onchange="setYear();">
+			<option value="">-- Choose a Year --</option>
+			<option>1999</option>
+			<option>2000</option>
+			<option>2001</option>
+			<option>2002</option>
+			<option>2003</option>
+			<option>2004</option>
+			<option>2005</option>
+			<option>2006</option>
+			<option>2007</option>
+			<option>2008</option>
+			<option>2009</option>
+		</select>
+
+		<label for="year7text">
+			<h3 id="year7text">Year:</h3>
+		</label>
+		<select name="year7" id="year7" onchange="setYear();">
+			<option value="">-- Choose a Year --</option>
+			<option>2005</option>
+			<option>2006</option>
+			<option>2007</option>
+			<option>2008</option>
+			<option>2009</option>
+			<option>2010</option>
+			<option>2011</option>
+			<option>2012</option>
+			<option>2013</option>
+			<option>2014</option>
+			<option>2015</option>
+			<option>2016</option>
+			<option>2017</option>
+			<option>2018</option>
+			<option>2019</option>
+		</select>
+
 		<br>
 		<button id="generatebutton" onclick="setData();">Generate Map</button>
 	</div>
@@ -504,106 +575,117 @@
 				}*/
 		var CATEGORY;
 		function setCategory() {
-				categoryPerm = document.getElementById("categorydropdown").value;
+			categoryPerm = document.getElementById("categorydropdown").value;
 
-				document.getElementById("gender").style.display = "none";
-				document.getElementById("genderdropdown").style.display = "none";
-				document.getElementById("race").style.display = "none";
-				document.getElementById("racedropdown").style.display = "none";
-				document.getElementById("age").style.display = "none";
-				document.getElementById("agedropdown").style.display = "none";
+			document.getElementById("gender").style.display = "none";
+			document.getElementById("genderdropdown").style.display = "none";
+			document.getElementById("race").style.display = "none";
+			document.getElementById("racedropdown").style.display = "none";
+			document.getElementById("age").style.display = "none";
+			document.getElementById("agedropdown").style.display = "none";
 
-				document.getElementById("violentcrime").style.display = "none";
-				document.getElementById("violentcrimedropdown").style.display = "none";
-				document.getElementById("violentcrimenum").style.display = "none";
-				document.getElementById("violentcrimenumdropdown").style.display = "none";
+			document.getElementById("violentcrime").style.display = "none";
+			document.getElementById("violentcrimedropdown").style.display = "none";
+			document.getElementById("violentcrimenum").style.display = "none";
+			document.getElementById("violentcrimenumdropdown").style.display = "none";
 
-				document.getElementById("propertycrime").style.display = "none";
-				document.getElementById("propertycrimedropdown").style.display = "none";
-				document.getElementById("propertycrimenum").style.display = "none";
-				document.getElementById("propertycrimenumdropdown").style.display = "none";
-			
-				document.getElementById("citstatus").style.display = "none";
-				document.getElementById("citstatusdropdown").style.display = "none";
-				document.getElementById("finstatus").style.display = "none";
-				document.getElementById("finstatusdropdown").style.display = "none";
-				document.getElementById("empstatus").style.display = "none";
-				document.getElementById("empstatusdropdown").style.display = "none";
-				document.getElementById("edulevel").style.display = "none";
-				document.getElementById("eduleveldropdown").style.display = "none";
+			document.getElementById("propertycrime").style.display = "none";
+			document.getElementById("propertycrimedropdown").style.display = "none";
+			document.getElementById("propertycrimenum").style.display = "none";
+			document.getElementById("propertycrimenumdropdown").style.display = "none";
 
-				document.getElementById("crowdfunding").style.display = "none";
-				document.getElementById("crowdfundingdropdown").style.display = "none";
+			document.getElementById("citstatus").style.display = "none";
+			document.getElementById("citstatusdropdown").style.display = "none";
+			document.getElementById("finstatus").style.display = "none";
+			document.getElementById("finstatusdropdown").style.display = "none";
+			document.getElementById("empstatus").style.display = "none";
+			document.getElementById("empstatusdropdown").style.display = "none";
+			document.getElementById("edulevel").style.display = "none";
+			document.getElementById("eduleveldropdown").style.display = "none";
+			document.getElementById("edulevel25-44").style.display = "none";
+			document.getElementById("edulevel25-44dropdown").style.display = "none";
 
-				document.getElementById("year1text").style.display = "none";
-				document.getElementById("year1").style.display = "none";
-				document.getElementById("year2text").style.display = "none";
-				document.getElementById("year2").style.display = "none";
-				document.getElementById("year3text").style.display = "none";
-				document.getElementById("year3").style.display = "none";
-				document.getElementById("year4text").style.display = "none";
-				document.getElementById("year4").style.display = "none";
-				document.getElementById("year5text").style.display = "none";
-				document.getElementById("year5").style.display = "none";
+			document.getElementById("crowdfunding").style.display = "none";
+			document.getElementById("crowdfundingdropdown").style.display = "none";
 
-				document.getElementById("generatebutton").style.display = "none";
-				//SPECIFIC_BUTTON.style.display = "none";
+			document.getElementById("year1text").style.display = "none";
+			document.getElementById("year1").style.display = "none";
+			document.getElementById("year2text").style.display = "none";
+			document.getElementById("year2").style.display = "none";
+			document.getElementById("year3text").style.display = "none";
+			document.getElementById("year3").style.display = "none";
+			document.getElementById("year4text").style.display = "none";
+			document.getElementById("year4").style.display = "none";
+			document.getElementById("year5text").style.display = "none";
+			document.getElementById("year5").style.display = "none";
+			document.getElementById("year6text").style.display = "none";
+			document.getElementById("year6").style.display = "none";
+			document.getElementById("year7text").style.display = "none";
+			document.getElementById("year7").style.display = "none";
 
-				if (categoryPerm == "gender") {
-					document.getElementById("gender").style.display = "block";
-					document.getElementById("genderdropdown").style.display = "block";
-					//SPECIFIC_BUTTON.innerText = "Set Specific Gender";
-				}
-				else if (categoryPerm == "race") {
-					document.getElementById("race").style.display = "block";
-					document.getElementById("racedropdown").style.display = "block";
-					//SPECIFIC_BUTTON.innerText = "Set Specific Race";
-				}
-				else if (categoryPerm == "age") {
-					document.getElementById("age").style.display = "block";
-					document.getElementById("agedropdown").style.display = "block";
-					//SPECIFIC_BUTTON.innerText = "Set Specific Age Range";
-				}
-				else if (categoryPerm == "violentcrime") {
-					document.getElementById("violentcrime").style.display = "block";
-					document.getElementById("violentcrimedropdown").style.display = "block";
-				}
-				else if (categoryPerm == "violentcrimenum") {
-					document.getElementById("violentcrimenum").style.display = "block";
-					document.getElementById("violentcrimenumdropdown").style.display = "block";
-				}
-				else if (categoryPerm == "propertycrime") {
-					document.getElementById("propertycrime").style.display = "block";
-					document.getElementById("propertycrimedropdown").style.display = "block";
-				}
-				else if (categoryPerm == "propertycrimenum") {
-					document.getElementById("propertycrimenum").style.display = "block";
-					document.getElementById("propertycrimenumdropdown").style.display = "block";
-				}
-				else if (categoryPerm == "citstatus") {
-					document.getElementById("citstatus").style.display = "block";
-					document.getElementById("citstatusdropdown").style.display = "block";
-					//SPECIFIC_BUTTON.innerText = "Set Specific Citizenship Status";
-				}
-				else if (categoryPerm == "finstatus") {
-					document.getElementById("finstatus").style.display = "block";
-					document.getElementById("finstatusdropdown").style.display = "block";
-					//SPECIFIC_BUTTON.innerText = "Set Specific Citizenship Status";
-				}
-				else if (categoryPerm == "empstatus") {
-					document.getElementById("empstatus").style.display = "block";
-					document.getElementById("empstatusdropdown").style.display = "block";
-					//SPECIFIC_BUTTON.innerText = "Set Specific Citizenship Status";
-				}
-				else if (categoryPerm == "edulevel") {
-					document.getElementById("edulevel").style.display = "block";
-					document.getElementById("eduleveldropdown").style.display = "block";
-					//SPECIFIC_BUTTON.innerText = "Set Specific Education Level";
-				}
-				else if (categoryPerm == "crowdfunding") {
-					document.getElementById("crowdfunding").style.display = "block";
-					document.getElementById("crowdfundingdropdown").style.display = "block";
-				}
+			document.getElementById("generatebutton").style.display = "none";
+			//SPECIFIC_BUTTON.style.display = "none";
+
+			if (categoryPerm == "gender") {
+				document.getElementById("gender").style.display = "block";
+				document.getElementById("genderdropdown").style.display = "block";
+				//SPECIFIC_BUTTON.innerText = "Set Specific Gender";
+			}
+			else if (categoryPerm == "race") {
+				document.getElementById("race").style.display = "block";
+				document.getElementById("racedropdown").style.display = "block";
+				//SPECIFIC_BUTTON.innerText = "Set Specific Race";
+			}
+			else if (categoryPerm == "age") {
+				document.getElementById("age").style.display = "block";
+				document.getElementById("agedropdown").style.display = "block";
+				//SPECIFIC_BUTTON.innerText = "Set Specific Age Range";
+			}
+			else if (categoryPerm == "violentcrime") {
+				document.getElementById("violentcrime").style.display = "block";
+				document.getElementById("violentcrimedropdown").style.display = "block";
+			}
+			else if (categoryPerm == "violentcrimenum") {
+				document.getElementById("violentcrimenum").style.display = "block";
+				document.getElementById("violentcrimenumdropdown").style.display = "block";
+			}
+			else if (categoryPerm == "propertycrime") {
+				document.getElementById("propertycrime").style.display = "block";
+				document.getElementById("propertycrimedropdown").style.display = "block";
+			}
+			else if (categoryPerm == "propertycrimenum") {
+				document.getElementById("propertycrimenum").style.display = "block";
+				document.getElementById("propertycrimenumdropdown").style.display = "block";
+			}
+			else if (categoryPerm == "citstatus") {
+				document.getElementById("citstatus").style.display = "block";
+				document.getElementById("citstatusdropdown").style.display = "block";
+				//SPECIFIC_BUTTON.innerText = "Set Specific Citizenship Status";
+			}
+			else if (categoryPerm == "finstatus") {
+				document.getElementById("finstatus").style.display = "block";
+				document.getElementById("finstatusdropdown").style.display = "block";
+				//SPECIFIC_BUTTON.innerText = "Set Specific Citizenship Status";
+			}
+			else if (categoryPerm == "empstatus") {
+				document.getElementById("empstatus").style.display = "block";
+				document.getElementById("empstatusdropdown").style.display = "block";
+				//SPECIFIC_BUTTON.innerText = "Set Specific Citizenship Status";
+			}
+			else if (categoryPerm == "edulevel") {
+				document.getElementById("edulevel").style.display = "block";
+				document.getElementById("eduleveldropdown").style.display = "block";
+				//SPECIFIC_BUTTON.innerText = "Set Specific Education Level";
+			}
+			else if (categoryPerm == "edulevel25-44") {
+				document.getElementById("edulevel25-44").style.display = "block";
+				document.getElementById("edulevel25-44dropdown").style.display = "block";
+				//SPECIFIC_BUTTON.innerText = "Set Specific Education Level";
+			}
+			else if (categoryPerm == "crowdfunding") {
+				document.getElementById("crowdfunding").style.display = "block";
+				document.getElementById("crowdfundingdropdown").style.display = "block";
+			}
 		}
 
 		function setSpecific() {
@@ -619,11 +701,15 @@
 			document.getElementById("year4").style.display = "none";
 			document.getElementById("year5text").style.display = "none";
 			document.getElementById("year5").style.display = "none";
+			document.getElementById("year6text").style.display = "none";
+			document.getElementById("year6").style.display = "none";
+			document.getElementById("year7text").style.display = "none";
+			document.getElementById("year7").style.display = "none";
+
 			document.getElementById("generatebutton").style.display = "none";
 
-			if (categoryPerm == "edulevel" || categoryPerm == "violentcrime" || 
-			categoryPerm == "violentcrimenum" || categoryPerm == "propertycrime" ||
-			categoryPerm == "propertycrime") {
+			if (categoryPerm == "violentcrime" || categoryPerm == "violentcrimenum" || 
+			categoryPerm == "propertycrime" || categoryPerm == "propertycrime") {
 				document.getElementById("year2text").style.display = "block";
 				document.getElementById("year2").style.display = "block";
 			}
@@ -639,6 +725,14 @@
 				document.getElementById("year5text").style.display = "block";
 				document.getElementById("year5").style.display = "block";
 			}
+			else if (specificPerm == "high_school" || specificPerm == "bachelor") {
+				document.getElementById("year6text").style.display = "block";
+				document.getElementById("year6").style.display = "block";
+			}
+			else if (specificPerm == "25-44_high_school" || specificPerm == "25-44_bachelor") {
+				document.getElementById("year7text").style.display = "block";
+				document.getElementById("year7").style.display = "block";
+			}
 			else {
 				document.getElementById("year1text").style.display = "block";
 				document.getElementById("year1").style.display = "block";
@@ -650,9 +744,9 @@
 		function setYear() {
 			document.getElementById("generatebutton").style.display = "none";
 
-			if (categoryPerm == "edulevel" || categoryPerm == "violentcrime" || 
-			categoryPerm == "violentcrimenum" || categoryPerm == "propertycrime" ||
-			categoryPerm == "propertycrime"){
+			if (categoryPerm == "violentcrime" ||
+				categoryPerm == "violentcrimenum" || categoryPerm == "propertycrime" ||
+				categoryPerm == "propertycrime") {
 				yearPerm = document.getElementById("year2").value;
 			}
 			else if (categoryPerm == "finstatus") {
@@ -664,10 +758,16 @@
 			else if (categoryPerm == "crowdfunding") {
 				yearPerm = document.getElementById("year5").value;
 			}
+			else if (specificPerm == "high_school" || specificPerm == "bachelor") {
+				yearPerm = document.getElementById("year6").value;
+			}
+			else if (specificPerm == "25-44_high_school" || specificPerm == "25-44_bachelor") {
+				yearPerm = document.getElementById("year7").value;
+			}
 			else
 				yearPerm = document.getElementById("year1").value;
-			
-			if(yearPerm!="")
+
+			if (yearPerm != "")
 				document.getElementById("generatebutton").style.display = "block";
 		}
 
@@ -732,27 +832,23 @@
 			}
 
 			const STATE_DATA = getStateData();
-			const stateNum=51;
+			const stateNum = 51;
 
 			//set the color of each state
 			var currentData = new Array(stateNum);
-			var str=STATE_DATA[0][STATE];
+			var str = STATE_DATA[0][STATE];
 			var large = parseFloat(str.replaceAll(",", ""));
 			var small = parseFloat(str.replaceAll(",", ""));
 
 			for (var i = 0; i < stateNum; i++) {
-				str=STATE_DATA[i][STATE];
+				str = STATE_DATA[i][STATE];
 				currentData[i] = parseFloat(str.replaceAll(",", ""));
-				console.log(currentData[i]);
 				if (isNaN(currentData[i])) {
 					currentData[i] = 1;
-					//console.log(i);
 				}
 				if (currentData[i] > large) large = currentData[i];
 				if (currentData[i] < small) small = currentData[i];
 			}
-			console.log(large);
-			console.log(small);
 
 			const scale = 1 / (large - small);
 			for (var i = 0; i < stateNum; i++) {
