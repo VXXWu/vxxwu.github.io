@@ -1,27 +1,94 @@
-#us-map{
-  /*display: inline-block;*/
-  /*display: flex;
-  position: absolute;*/
+h1 {
+  text-align: center;
+  font-size: 40;
+}
+
+#gender,
+#race,
+#age,
+#violentcrime,
+#violentcrimenum,
+#propertycrime,
+#propertycrimenum,
+#citstatus,
+#finstatus,
+#empstatus,
+#edulevel,
+#crowdfunding,
+#crowdfundingnum,
+#genderdropdown,
+#racedropdown,
+#agedropdown,
+#violentcrimedropdown,
+#violentcrimenumdropdown,
+#propertycrimedropdown,
+#propertycrimenumdropdown,
+#citstatusdropdown,
+#finstatusdropdown,
+#empstatusdropdown,
+#eduleveldropdown,
+#crowdfundingdropdown,
+#crowdfundingnumdropdown,
+
+#year1text,
+#year2text,
+#year3text,
+#year4text,
+#year5text,
+#year1,
+#year2,
+#year3,
+#year4,
+#year5,
+#generatebutton {
+  display: none;
+  top: 0px;
+  position: relative;
+}
+
+#category,
+#categorydropdown {
+  display: block;
+  top: 0px;
+  position: relative;
+}
+
+
+/*.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+  }*/
+/*
+.float-child {
+  width: 50%;
+  float: left;
+}*/
+
+#us-map {
   position: relative;
   top: 10;
-  left: 10;
-  width: 80%;
-  height: 80%;
+  /*left: 700;*/
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
 }
-path:hover, circle:hover {
+
+path:hover,
+circle:hover {
   stroke: #002868 !important;
-  stroke-width:2px;
+  stroke-width: 2px;
   stroke-linejoin: round;
   fill: #002868 !important;
   cursor: pointer;
 }
+
 #path67 {
   fill: none !important;
   stroke: #A9A9A9 !important;
   cursor: default;
 }
+
 #info-box {
   display: none;
   position: absolute;
@@ -35,25 +102,33 @@ path:hover, circle:hover {
   /*font-family: arial;*/
 }
 
+#selector{
+  width: 30%;
+  float: left;
+}
+
+#map{
+  width: 70%;
+  float: left;
+}
+
 #maptitle {
   text-align: center;
-	font-size: 40;
+  font-size: 40;
   font-family: "Times New Roman";
   font-weight: bold;
 }
 
 #lineargradient {
-  display: inline-flex;
   position: relative;
   top: 0;
   left: 100;
   /*height: 50px;
-  width: 100px;*/
-  width: 80%;
-  height: 10;
-  /*width: 100%;
-  height: 10%;*/
+width: 100px;*/
+  width: 100%;
+  height: 10%;
   z-index: 99;
-  background-color: rgb(90, 210, 230); /* For browsers that do not support gradients */
-  background: linear-gradient(to right, rgb(90, 210, 230),	rgb(10, 70, 110))
+  background-color: rgb(90, 210, 230);
+  /* For browsers that do not support gradients */
+  background: linear-gradient(to right, rgb(90, 210, 230), rgb(10, 70, 110))
 }

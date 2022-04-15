@@ -1,274 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <style>
+    body,
+    html {
+      height: 100%;
+      font-family: "Inconsolata", sans-serif;
+    }
+
+    .bgimg {
+      background-position: center;
+      background-size: cover;
+      background-image: url("/w3images/coffeehouse.jpg");
+      min-height: 75%;
+    }
+    #mylink, #menuheading {
+      width: 20%;
+    }
+
+    .menu {
+      display: none;
+    }
+  </style>
+</head>
+
 <body>
-	<style>
-		h1 {
-			text-align: center;
-			font-size: 40;
-		}
 
-		#category,
-		#categorydropdown,
-		#categorybutton,
-		#gender,
-		#race,
-		#age,
-		#citstatus,
-		#edulevel,
-		#genderdropdown,
-		#racedropdown,
-		#agedropdown,
-		#citstatusdropdown,
-		#eduleveldropdown,
-		#specificbutton,
-		#year1text,
-		#year2text,
-		#year1,
-		#year2,
-		#generatebutton {
-			display: none;
-			top: 0px;
-			position: relative;
-		}
-	</style>
+  <!-- Links (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-row w3-padding w3-black">
+      <div class="w3-col s3">
+        <a href="#" class="w3-button w3-block w3-black">HOME</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+      </div>
+      <div class="w3-col s3">
+        <a href="index.html" class="w3-button w3-block w3-black">THE MAP</a>
+      </div>
+    </div>
+  </div>
 
-	<html>
+  <!-- Header with image -->
+  <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-middle w3-center">
+      <span class="w3-text-white" style="font-size:90px">Interactive<br>Map Creator</span>
+    </div>
+  </header>
 
-	<title>Interactive Map Creator</title>
-	<h1>Interactive Map Creator</h1>
+  <!-- Add a background color and large text to the whole page -->
+  <div class="w3-sand w3-grayscale w3-large">
 
-	<div id="introductiontext">
-	<h2>Visualization has always been an important tool in conveying ideas and
-		deepening our understanding of different topics by looking at concepts through
-		a visual medium.</h2>
-	<h2>One group of people in particular that can take good advantage of visualization
-		in the form of interactive maps are social scientists.</h2>
-	<h2>Interactive maps can be used to more easily see correlations and relationships
-		between different variables than through traditional, non-visualized mediums,
-		and multiple researchers can easily use the same data visualizations to study.</h2>
-	<h2>Click the "Get Started" button below to begin customizing your own interactive
-		map of the United States.</h2>
-	</div>
+    <!-- About Container -->
+    <div class="w3-container" id="about">
+      <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE INTERACTIVE MAP</span></h5>
+        <p>Geographic information is difficult to intuitively understand, but by utilizing visualization
+          tools like interactive maps, geographic data can be examined in an easily processable format to
+          develop new research questions and see relationships.</p>
+        <p>This interactive map can display a large dataset of 30 different basic demographics listed
+          below and can additionally display part of a professionally gathered dataset on crowdfunding.
+          Enjoy!
+        </p>
+      </div>
+      <!--CHANGE TO OWN IMAGE OF DEFAULT MAP WITHOUT VARIABLES-->
+      <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+    </div>
 
-	<button id="startbutton" onclick="start();">Get Started</button>
+    <!-- Menu Container -->
+    <div class="w3-container" id="menu">
+      <div class="w3-content" style="max-width:700px">
 
-	<label for="category">
-		<h3 id="category">Category:</h3>
-	</label>
-	<select name="categorydropdown" id="categorydropdown">
-		<option value="">-- Select a Category --</option>
-		<option value="gender">Gender</option>
-		<option value="race">Race</option>
-		<option value="age">Age</option>
-		<option value="citstatus">Citizenship Status</option>
-		<option value="edulevel">Education Level</option>
-	</select>
+        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE DEMOGRAPHICS</span></h5>
 
-	<br>
-	<button id="categorybutton" onclick="setCategory();">Set Category</button>
+        <div class="w3-row w3-center w3-card w3-padding">
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Gender');" id="myLink">
+            <div class="w3-col s6 tablink" id="menuheading">Gender</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Race');">
+            <div class="w3-col s6 tablink" id="menuheading">Race</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Age');">
+            <div class="w3-col s6 tablink" id="menuheading">Age</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Citizenship Status');">
+            <div class="w3-col s6 tablink" id="menuheading">Citizenship Status</div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Education Level');">
+            <div class="w3-col s6 tablink" id="menuheading">Education Level</div>
+          </a>
+        </div>
 
-	<label for="gender">
-		<h3 id="gender">Specific Gender:</h3>
-	</label>
-	<select name="genderdropdown" id="genderdropdown">
-		<option value="">-- Select a Gender --</option>
-		<option value="male">Male</option>
-		<option value="female">Female</option>
-	</select>
+        <div id="Gender" class="w3-container menu w3-padding-48 w3-card">
+          <h5>Male</h5>
+          <h5>Female</h5>
+        </div>
 
-	<label for="race">
-		<h3 id="race">Specific Race:</h3>
-	</label>
-	<select name="racedropdown" id="racedropdown">
-		<option value="">--------------- Select a Race ---------------</option>
-		<option value="white">White</option>
-		<option value="black">Black</option>
-		<option value="hispanic">Hispanic</option>
-		<option value="asian">Asian</option>
-		<option value="am_ind/al_nat">American Indian/Alaska Native</option>
-		<option value="nat_ha/pac_is">Native Hawaiian/Other Pacific Islander</option>
-		<option value="multiple">Multiple Races</option>
-	</select>
+        <div id="Race" class="w3-container menu w3-padding-48 w3-card">
+          <h5>White</h5>
+          <h5>Black</h5>
+          <h5>Hispanic</h5>
+          <h5>Asian</h5>
+          <h5>American Indian/Alaska Native</h5>
+          <h5>Native Hawaiian/Other Pacific Islander</h5>
+        </div>
 
-	<label for="age">
-		<h3 id="age">Specific Age Range:</h3>
-	</label>
-	<select name="agedropdown" id="agedropdown">
-		<option value="">-- Select an Age Range --</option>
-		<option value="0-18">0-18</option>
-		<option value="19-25">19-25</option>
-		<option value="26-34">26-34</option>
-		<option value="35-54">35-54</option>
-		<option value="55-64">55-64</option>
-		<option value="65+">65+</option>
-	</select>
+        <div id="Age" class="w3-container menu w3-padding-48 w3-card">
+          <h5>0-18</h5>
+          <h5>19-25</h5>
+          <h5>26-34</h5>
+          <h5>35-54</h5>
+          <h5>55-64</h5>
+          <h5>65+</h5>
+        </div>
 
-	<label for="citstatus">
-		<h3 id="citstatus">Specific Citizenship Status:</h3>
-	</label>
-	<select name="citstatusdropdown" id="citstatusdropdown">
-		<option value="">-- Select a Citizenship Status --</option>
-		<option value="citizen">Citizen</option>
-		<option value="non-citizen">Non-Citizen</option>
-	</select>
+        <div id="Citizenship Status" class="w3-container menu w3-padding-48 w3-card">
+          <h5>Citizen</h5>
+          <h5>Non-Citizen</h5>
+        </div>
 
-	<label for="edulevel">
-		<h3 id="edulevel">Specific Education Level:</h3>
-	</label>
-	<select name="eduleveldropdown" id="eduleveldropdown">
-		<option value="">-- Select an Education Level --</option>
-		<option value="high_school">High School</option>
-		<option value="bachelor">Bachelor's Degree</option>
-	</select>
+        <div id="Education Level" class="w3-container menu w3-padding-48 w3-card">
+          <h5>High School</h5>
+          <h5>Bachelor's Degree</h5>
+        </div>
+      </div>
+    </div>
 
-	<br>
-	<button id="specificbutton" onclick="setSpecific();"></button>
+    <div class= "w3-center">
+      <br><br>
+    <p><button class="w3-button w3-black w3-jumbo" id="mapbutton" onclick="mapFunction();">THE MAP</button></p>
+  </div>
 
-	<label for="year1text">
-		<h3 id="year1text">Year:</h3>
-	</label>
-	<select name="year1" id="year1">
-		<option value="">-- Choose a Year --</option>
-		<option>2008</option>
-		<option>2009</option>
-		<option>2010</option>
-		<option>2011</option>
-		<option>2012</option>
-		<option>2013</option>
-		<option>2014</option>
-		<option>2015</option>
-		<option>2016</option>
-		<option>2017</option>
-		<option>2018</option>
-		<option>2019</option>
-	</select>
+    <!-- End page content -->
+  </div>
 
-	<label for="year2text">
-		<h3 id="year2text">Year:</h3>
-	</label>
-	<select name="year2" id="year2">
-		<option value="">-- Choose a Year --</option>
-		<option>1999</option>
-		<option>2000</option>
-		<option>2001</option>
-		<option>2002</option>
-		<option>2003</option>
-		<option>2004</option>
-		<option>2005</option>
-		<option>2006</option>
-		<option>2007</option>
-		<option>2008</option>
-		<option>2009</option>
-		<option>2010</option>
-		<option>2011</option>
-		<option>2012</option>
-		<option>2013</option>
-		<option>2014</option>
-		<option>2015</option>
-		<option>2016</option>
-		<option>2017</option>
-		<option>2018</option>
-		<option>2019</option>
-	</select>
+  <script>
+    // Tabbed Menu
+    function openMenu(evt, menuName) {
+      var i, x, tablinks;
+      x = document.getElementsByClassName("menu");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+      }
+      document.getElementById(menuName).style.display = "block";
+      evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+    }
+    document.getElementById("myLink").click();
 
-	<br>
-	<button id="generatebutton" onclick="setData();printData();">Generate Map</button>
+    function mapFunction() {
+      location.href = 'index.html';
+    }
+  </script>
 
-	</html>
-
-	<script>
-		function start() {
-			document.getElementById("introductiontext").style.display = "none";
-			document.getElementById("startbutton").style.display = "none";
-			document.getElementById("category").style.display = "block";
-			document.getElementById("categorydropdown").style.display = "block";
-			document.getElementById("categorybutton").style.display = "block";
-		}
-		function setCategory() {
-			if (typeof (Storage) !== "undefined") {
-				const CATEGORY = document.getElementById("categorydropdown").value;
-				localStorage.setItem("category", CATEGORY);
-				const SPECIFIC_BUTTON = document.getElementById("specificbutton");
-
-				document.getElementById("gender").style.display = "none";
-				document.getElementById("genderdropdown").style.display = "none";
-				document.getElementById("race").style.display = "none";
-				document.getElementById("racedropdown").style.display = "none";
-				document.getElementById("age").style.display = "none";
-				document.getElementById("agedropdown").style.display = "none";
-				document.getElementById("citstatus").style.display = "none";
-				document.getElementById("citstatusdropdown").style.display = "none";
-				document.getElementById("edulevel").style.display = "none";
-				document.getElementById("eduleveldropdown").style.display = "none";
-				SPECIFIC_BUTTON.style.display = "none";
-
-				if (CATEGORY == "gender") {
-					document.getElementById("gender").style.display = "block";
-					document.getElementById("genderdropdown").style.display = "block";
-					SPECIFIC_BUTTON.innerText = "Set Specific Gender";
-				}
-				else if (CATEGORY == "race") {
-					document.getElementById("race").style.display = "block";
-					document.getElementById("racedropdown").style.display = "block";
-					SPECIFIC_BUTTON.innerText = "Set Specific Race";
-				}
-				else if (CATEGORY == "age") {
-					document.getElementById("age").style.display = "block";
-					document.getElementById("agedropdown").style.display = "block";
-					SPECIFIC_BUTTON.innerText = "Set Specific Age Range";
-				}
-				else if (CATEGORY == "citstatus") {
-					document.getElementById("citstatus").style.display = "block";
-					document.getElementById("citstatusdropdown").style.display = "block";
-					SPECIFIC_BUTTON.innerText = "Set Specific Citizenship Status";
-				}
-				else if (CATEGORY == "edulevel") {
-					document.getElementById("edulevel").style.display = "block";
-					document.getElementById("eduleveldropdown").style.display = "block";
-					SPECIFIC_BUTTON.innerText = "Set Specific Education Level";
-				}
-				if (CATEGORY != "")
-					SPECIFIC_BUTTON.style.display = "block";
-			} else {
-				location.href = 'notSupported.html';
-			}
-		}
-
-		function setSpecific() {
-			const SPECIFIC = document.getElementById(localStorage.getItem("category") + "dropdown").value;
-			localStorage.setItem("specific", SPECIFIC);
-			const GENERATE_BUTTON = document.getElementById("generatebutton");
-			const CATEGORY = document.getElementById("categorydropdown").value;
-
-			document.getElementById("year1text").style.display = "none";
-			document.getElementById("year1").style.display = "none";
-			document.getElementById("year2text").style.display = "none";
-			GENERATE_BUTTON.style.display = "none";
-
-			if (CATEGORY == "edulevel") {
-				document.getElementById("year2text").style.display = "block";
-				document.getElementById("year2").style.display = "block";
-			}
-			else {
-				document.getElementById("year1text").style.display = "block";
-				document.getElementById("year1").style.display = "block";
-			}
-			if (SPECIFIC != "")
-				GENERATE_BUTTON.style.display = "block";
-		}
-
-		function setData() {
-			const CATEGORY = document.getElementById("categorydropdown").value;
-			if (CATEGORY == "edulevel")
-				localStorage.setItem("year", document.getElementById("year2").value);
-			else
-				localStorage.setItem("year", document.getElementById("year1").value);
-			if(localStorage.getItem("year")!=="")
-				location.href = 'map.html';
-		}
-
-		/*function printData() {
-			console.log(localStorage.getItem("category"));
-			console.log(localStorage.getItem("specific"));
-			console.log(localStorage.getItem("year"));
-		}*/
-	</script>
 </body>
+
+</html>
