@@ -899,12 +899,13 @@
 			//set the color of each state
 			var currentData = new Array(stateNum);
 			var str = STATE_DATA[0][STATE];
-			var large = parseFloat(str.replaceAll(",", ""));
-			var small = parseFloat(str.replaceAll(",", ""));
+			const firstPulled=parseFloat(str.replaceAll(",", "").replaceAll("$", ""));
+			var large = firstPulled;
+			var small = firstPulled;
 
 			for (var i = 0; i < stateNum; i++) {
 				str = STATE_DATA[i][STATE];
-				currentData[i] = parseFloat(str.replaceAll(",", ""));
+				currentData[i] = parseFloat(str.replaceAll(",", "").replaceAll("$", ""));
 				if (isNaN(currentData[i])) {
 					currentData[i] = 1;
 				}
