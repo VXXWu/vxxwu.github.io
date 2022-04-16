@@ -3,7 +3,7 @@ h1 {
   font-size: 40;
 }
 
-#gender,
+#sex,
 #race,
 #age,
 #violentcrime,
@@ -16,10 +16,11 @@ h1 {
 #edulevel,
 #edulevel25-44,
 #crowdfunding,
-#crowdfundingnum,
-#genderdropdown,
+
+#sexdropdown,
 #racedropdown,
 #agedropdown,
+
 #violentcrimedropdown,
 #violentcrimenumdropdown,
 #propertycrimedropdown,
@@ -30,7 +31,6 @@ h1 {
 #eduleveldropdown,
 #edulevel25-44dropdown,
 #crowdfundingdropdown,
-#crowdfundingnumdropdown,
 
 #year1text,
 #year2text,

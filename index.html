@@ -22,12 +22,30 @@
       background-image: url("mapScreenshot.png");
       min-height: 100%;
     }
-    #mylink, #menuheading {
+
+    #mylink,
+    #menuheading {
       width: 33%;
+    }
+
+    #scientistmenuheading {
+      width: 100%;
+    }
+
+    .tutorial {
+      width: 50%;
     }
 
     .menu {
       display: none;
+    }
+
+    #websitelink {
+      color: #0066CC;
+    }
+
+    #websitelink:hover {
+      color: #800080;
     }
   </style>
 </head>
@@ -37,16 +55,22 @@
   <!-- Links (sit on top) -->
   <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
-      <div class="w3-col s3">
+      <div class="w3-col s2">
         <a href="#" class="w3-button w3-block w3-black">HOME</a>
       </div>
-      <div class="w3-col s3">
+      <div class="w3-col s2">
         <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
       </div>
-      <div class="w3-col s3">
-        <a href="#menu" class="w3-button w3-block w3-black">SOCIAL DEMOGRAPHICS</a>
+      <div class="w3-col s2">
+        <a href="#tutorial" class="w3-button w3-block w3-black">TUTORIAL</a>
       </div>
-      <div class="w3-col s3">
+      <div class="w3-col s2">
+        <a href="#social_demographics" class="w3-button w3-block w3-black">SOCIAL DEMOGRAPHICS</a>
+      </div>
+      <div class="w3-col s2">
+        <a href="#scientist-gathered_metrics" class="w3-button w3-block w3-black">SCIENTIST-GATHERED METRICS</a>
+      </div>
+      <div class="w3-col s2">
         <a href="map.html" class="w3-button w3-block w3-black">THE MAP</a>
       </div>
     </div>
@@ -66,133 +90,282 @@
     <div class="w3-container" id="about">
       <div class="w3-content" style="max-width:700px">
         <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE INTERACTIVE MAP</span></h5>
-        <p><span style="background-color: #FFFF00">Social scientists</span>HIGHLIGHT MORE deal with a lot of geographic information is difficult to intuitively understand, but by utilizing visualization
-          tools like interactive maps, geographic data can be examined in an easily processable format to
-          develop new research questions and see relationships.</p>
-        <p>This interactive map can display a large dataset of 30 different basic social demographic metrics, like gender and violent crime rate, that I gathered from various reliable sources, like the US Census Bureau HYPERLINK<link>(https://www.census.gov/)</link> and the FBI UCR (https://www.fbi.gov/services/cjis/ucr/publications), listed
-          below and can additionally display part of a professionally gathered dataset on crowdfunding.
-          Enjoy!
+        <p><span style="background-color: #FFFF00">Social scientists</span> deal with a lot of <span
+            style="background-color: #FFFF00">geographic information</span> that is difficult to intuitively understand,
+          but by utilizing visualization
+          tools like <span style="background-color: #FFFF00">interactive maps</span>, geographic data can be examined in
+          an easily processable format to develop new <span style="background-color: #FFFF00">research questions</span>
+          and see <span style="background-color: #FFFF00">relationships between metrics</span>.</p>
+        <p>This interactive map can display a large dataset of <span style="background-color: #FFFF00"></span>over
+          30</span>
+          different basic <span style="background-color: #FFFF00">social demographic metrics</span>, like sex and
+          violent crime rate, that I gathered from various reliable sources, like the <a id="websitelink"
+            href="https://www.census.gov/" target="_blank">US Census Bureau</a> and the <a id="websitelink"
+            href="https://www.fbi.gov/services/cjis/ucr/publications" target="_blank">FBI UCR</a> (Uniform Crime
+          Reporting Program), and can additionally display a
+          dataset on <span style="background-color: #FFFF00">crowdfunding</span> gathered by a Stanford social scientist
+          and processed by me.
+          All of these metrics are listed below in several categories with some clarifying details. Enjoy!
         </p>
+        <h4 class="w3-center"><span class="w3-text-gray w3-wide">ABOUT THE CREATOR</span></h5>
+          <p>Hi there! My name is Vince Wu, and I am a high school freshman who made this map. I really appreciate you
+            stopping by and taking a look at my website, and I hope my map can be an interesting and useful tool for you
+            to use.
+          </p>
       </div>
-      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tutorial</span></h5>
     </div>
 
-
-    <!-- Menu Container -->
-    <div class="w3-container" id="menu">
+    <!-- Tutorial container -->
+    <div class="w3-container" id="tutorial">
       <div class="w3-content" style="max-width:700px">
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">TUTORIAL</span></h5>
 
-        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SOCIAL DEMOGRAPHICS</span></h5>
-
-        <div class="w3-row w3-center w3-card w3-padding">
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Gender');" id="myLink">
-            <div class="w3-col s6 tablink" id="menuheading">Gender</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Race');">
-            <div class="w3-col s6 tablink" id="menuheading">Race</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Age');">
-            <div class="w3-col s6 tablink" id="menuheading">Age</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Violent Crime');">
-            <div class="w3-col s6 tablink" id="menuheading">Violent Crime</div>
-          </a>
-          <!--number or per 100,000-->
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Property Crime');">
-            <div class="w3-col s6 tablink" id="menuheading">Property Crime</div>
-          </a>
-          <hr style="color:black" />
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Citizenship Status');">
-            <div class="w3-col s6 tablink" id="menuheading">Citizenship Status</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Financial Status');">
-            <div class="w3-col s6 tablink" id="menuheading">Financial Status</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Employment Status');">
-            <div class="w3-col s6 tablink" id="menuheading">Employment Status</div>
-          </a>
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Education Level');">
-            <div class="w3-col s6 tablink" id="menuheading">Education Level</div>
-          </a>
-          <!--22-44 or normal-->
+        <div class="w3-col m6 w3-padding-large">
+          <p>1) Choose a <span style="background-color: #FFFF00">general category</span> of data that you want to
+            visualize</p>
+        </div>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <img src="tutorialCategory.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600">
         </div>
 
-        <div id="Gender" class="w3-container menu w3-padding-48 w3-card">
-          <h5>Male</h5>
-          <h5>Female</h5>
+        <div class="w3-col m6 w3-padding-large">
+          <p>2) Choose a <span style="background-color: #FFFF00">specific demographic</span> within the category</p>
+        </div>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <img src="tutorialSpecific.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600">
         </div>
 
-        <div id="Race" class="w3-container menu w3-padding-48 w3-card">
-          <h5>White</h5>
-          <h5>Black</h5>
-          <h5>Hispanic</h5>
-          <h5>Asian</h5>
-          <h5>American Indian/Alaska Native</h5>
-          <h5>Native Hawaiian/Other Pacific Islander</h5>
+        <div class="w3-col m6 w3-padding-large">
+          <p>3) Choose a <span style="background-color: #FFFF00">year</span> in which you want to visualize your
+            specific demographic</p>
+        </div>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <img src="tutorialYear.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600">
         </div>
 
-        <div id="Age" class="w3-container menu w3-padding-48 w3-card">
-          <h5>0-18</h5>
-          <h5>19-25</h5>
-          <h5>26-34</h5>
-          <h5>35-54</h5>
-          <h5>55-64</h5>
-          <h5>65+</h5>
+        <div class="w3-col m6 w3-padding-large">
+          <p>4) Click the <span style="background-color: #FFFF00">"Generate Map"</span> button to generate an
+            interactive map of your chosen demographic in your chosen
+            year</p>
+        </div>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <img src="tutorialOverall.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600">
         </div>
 
-        <div id="Violent Crime" class="w3-container menu w3-padding-48 w3-card">
-          <p class="w3-text-grey">Statistics can be shown in either <em class="w3-text-black">cases per 100,000 people</em> or <em class="w3-text-black">number</em></p>
-          <h5>0-18</h5>
-          <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p>
-          <h5>0-18</h5>
-          <h5>19-25</h5>
-          <h5>26-34</h5>
-          <h5>35-54</h5>
-          <h5>55-64</h5>
-          <h5>65+</h5>
+        <div class="w3-col m6 w3-padding-large">
+          <p>You can <span style="background-color: #FFFF00">change</span> the category, specific demographic, or year
+            at any time</p>
         </div>
-
-        <div id="Citizenship Status" class="w3-container menu w3-padding-48 w3-card">
-          <h5>Citizen</h5>
-          <h5>Non-Citizen</h5>
-        </div>
-
-        <div id="Education Level" class="w3-container menu w3-padding-48 w3-card">
-          <h5>High School</h5>
-          <h5>Bachelor's Degree</h5>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <img src="tutorialChange.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600">
         </div>
       </div>
     </div>
-
-    <p>paragraph explaining social scientist data</p>
-
-    <div class="w3-container" id="menu">
-      <div class="w3-content" style="max-width:700px">
-
-        <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SOCIAL SCIENTIST DATA</span></h5>
-
-        <div class="w3-row w3-center w3-card w3-padding">
-          <a href="javascript:void(0)" onclick="openMenu(event, 'Crowdfunding (Demo)');">
-            <div class="w3-col s6 tablink" id="menuheading">Crowdfunding (Demo)</div>
-          </a>
-        </div>
-
-        <div id="Crowdfunding (Demo)" class="w3-container menu w3-padding-48 w3-card">
-          <h5></h5>
-          <!---->
-        </div>
-      </div>
-    </div>
-
-    <div class= "w3-center">
-      <br><br>
-    <p><button class="w3-button w3-black w3-jumbo" id="mapbutton" onclick="mapFunction();">THE MAP</button></p>
   </div>
 
-    <!-- End page content -->
+  <!-- Menu Container -->
+  <div class="w3-container" id="social_demographics">
+    <div class="w3-content" style="max-width:700px">
+
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SOCIAL DEMOGRAPHICS</span></h5>
+
+      <div class="w3-row w3-center w3-card w3-padding w3-large">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Sex');" id="myLink">
+          <div class="w3-col s6 tablink" id="menuheading">Sex</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Race');">
+          <div class="w3-col s6 tablink" id="menuheading">Race</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Age');">
+          <div class="w3-col s6 tablink" id="menuheading">Age</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Violent Crime');">
+          <div class="w3-col s6 tablink" id="menuheading">Violent Crime</div>
+        </a>
+        <!--number or per 100,000-->
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Property Crime');">
+          <div class="w3-col s6 tablink" id="menuheading">Property Crime</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Citizenship Status');">
+          <div class="w3-col s6 tablink" id="menuheading">Citizenship Status</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Financial Status');">
+          <div class="w3-col s6 tablink" id="menuheading">Financial Status</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Employment Status');">
+          <div class="w3-col s6 tablink" id="menuheading">Employment Status</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Education Level');">
+          <div class="w3-col s6 tablink" id="menuheading">Education Level</div>
+        </a>
+        <!--22-44 or normal-->
+      </div>
+
+      <div id="Sex" class="w3-container menu w3-padding-32 w3-card">
+        <p class="w3-text-grey">A metric based on the biological attributes of males and females (chromosomes,
+          anatomy, hormones) - often confused with gender, a social construction based on someone's identity and
+          tendencies</p>
+        <h5>Male</h5>
+        <h5>Female</h5>
+      </div>
+      <div id="Race" class="w3-container menu w3-padding-32 w3-card">
+        <h5>White</h5>
+        <p class="w3-text-grey">A person having origins in any of the original peoples of Europe, the Middle East, or
+          North Africa</p>
+        <h5>Black</h5>
+        <p class="w3-text-grey">A person having origins in any of the Black racial groups of Africa</p>
+        <h5>Hispanic</h5>
+        <p class="w3-text-grey">A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish
+          culture or origin regardless of race</p>
+        <h5>Asian</h5>
+        <p class="w3-text-grey">A person having origins in any of the original peoples of the Far East, Southeast
+          Asia, or the Indian subcontinent including, for example, Cambodia, China, India, Japan, Korea, Malaysia,
+          Pakistan, the Philippine Islands, Thailand, and Vietnam</p>
+        <h5>American Indian/Alaska Native</h5>
+        <p class="w3-text-grey">A person having origins in any of the original peoples of North and South America
+          (including Central America) and who maintains tribal affiliation or community attachment</p>
+        <h5>Native Hawaiian/Other Pacific Islander</h5>
+        <p class="w3-text-grey">A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or
+          other Pacific Islands</p>
+      </div>
+      <div id="Age" class="w3-container menu w3-padding-32 w3-card">
+        <h5>0-18</h5>
+        <h5>19-25</h5>
+        <h5>26-34</h5>
+        <h5>35-54</h5>
+        <h5>55-64</h5>
+        <h5>65+</h5>
+      </div>
+
+      <div id="Violent Crime" class="w3-container menu w3-padding-32 w3-card">
+        <p class="w3-text-grey">Metrics can be shown in either <em class="w3-text-black">cases per 100,000 people</em>
+          or <em class="w3-text-black">number</em></p>
+        <h5>Overall Violent Crimes</h5>
+        <p class="w3-text-grey">The sum of all the other violent crime metrics</p>
+        <h5>Murder or Nonnegligent Manslaughter</h5>
+        <p class="w3-text-grey">The willful killing of a human being by another, including any death caused by
+          injuries received in a fight, argument, quarrel, assault or commission of a crime</p>
+        <h5>Rape</h5>
+        <p class="w3-text-grey">1999-2012 legacy UCR definition: The carnal knowledge of a female forcibly and against
+          her will</p>
+        <p class="w3-text-grey">2013-present revised UCR definition: Penetration, no matter how slight, of the vagina
+          or anus with any body part or object, or oral penetration by a sex organ of another person, without the
+          consent of the victim</p>
+        <p class="w3-text-grey">The revised definition expands the definition rape to include both male and female
+          victims and offenders and expand what acts constitute rape, including nonconsenting acts of sodomy and
+          sexual assaults with objects</p>
+        <h5>Robbery</h5>
+        <p class="w3-text-grey">The taking or attempting to take anything of value from someone's custody by force or
+          by putting the victim in fear</p>
+        <h5>Aggravated Assault</h5>
+        <p class="w3-text-grey">An unlawful attack by one person upon another for the purpose of inflicting severe
+          bodily injury, typically accompanied by the use of a weapon or by other means likely to produce death or
+          great bodily harm</p>
+      </div>
+      <div id="Property Crime" class="w3-container menu w3-padding-32 w3-card">
+        <p class="w3-text-grey">Metrics can be shown in either <em class="w3-text-black">cases per 100,000 people</em>
+          or <em class="w3-text-black">number</em></p>
+        <h5>Overall Property Crimes</h5>
+        <p class="w3-text-grey">The sum of all the other property crime metrics</p>
+        <h5>Burglary</h5>
+        <p class="w3-text-grey">The unlawful entry or attempted unlawful entry of a structure with the intent to
+          commit a felony or theft</p>
+        <h5>Larceny-Theft</h5>
+        <p class="w3-text-grey">The unlawful or attempted unlawful taking, carrying, leading, or riding away of
+          property from the possession of another</p>
+        <h5>Motor Vehicle Theft</h5>
+        <p class="w3-text-grey">The theft or attempted theft of a motor vehicle</p>
+      </div>
+      <div id="Citizenship Status" class="w3-container menu w3-padding-32 w3-card">
+        <h5>Citizen</h5>
+        <h5>Non-Citizen</h5>
+      </div>
+
+      <div id="Financial Status" class="w3-container menu w3-padding-32 w3-card">
+        <p class="w3-text-grey">Metrics were calculated using 2020 Consumer Price Index for All Urban Consumers
+          Research Series Adjusted Dollars, the Bureau of Labor Statistics' 2020 dollar adjusted for changes in cost
+          of living</p>
+        <h5>Median Household Income</h5>
+      </div>
+      <div id="Employment Status" class="w3-container menu w3-padding-32 w3-card">
+        <p class="w3-text-grey">The total civilian labor force includes the civilian population 16 years old or older
+          not inmates of institutions or on active duty in the Armed Forces</p>
+        <h5>Employed</h5>
+        <p class="w3-text-grey">Anyone who during the survey reference week worked at least 1 hour as a paid employee
+          or in their own business, were temporarily absent from their job, or worked without pay for a minimum of 15
+          hours in a business owned by a family member</p>
+        <h5>Unemployed</h5>
+        <p class="w3-text-grey">Anyone who during the survey reference week was not employed, were available for work,
+          and either made at least one active effort to find a job in the preceding four weeks or was temporarily laid
+          off and expecting to be recalled to their job</p>
+      </div>
+      <div id="Education Level" class="w3-container menu w3-padding-32 w3-card">
+        <p class="w3-text-grey">Metrics include anyone who has achieved that level of education, even if it is not
+          their highest level of education</p>
+        <p class="w3-text-grey">Metrics can be shown for either <em class="w3-text-black">people of all ages</em> or
+          <em class="w3-text-black">people aged 25-44</em>
+        </p>
+        <h5>High School</h5>
+        <h5>Bachelor's Degree</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container" id="scientist-gathered_metrics">
+    <div class="w3-content" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SCIENTIST-GATHERED METRICS</span></h5>
+
+      <div class="w3-large">
+        <p>One of the eventual goals for this map is to allow anyone to upload their own data in the proper format and be able 
+          to visualize their data across multiple years, and as a demonstration of that function, I have displayed several metrics
+          from data gathered by a Stanford social scientist on crowdfunding in the United States.
+        </p>
+      </div>
+
+      <div class="w3-row w3-center w3-card w3-padding w3-large">
+        <!--<a href="javascript:void(0)" onclick="openMenu(event, 'Crowdfunding (Demo)');" id="scientistLink">-->
+        <div class="w3-col s6 tablink" id="scientistmenuheading">Crowdfunding (Demo)</div>
+        <!--</a>-->
+      </div>
+
+      <!--<div id="Crowdfunding (Demo)" class="w3-container menu w3-padding-32 w3-card">-->
+      <div id="Crowdfunding (Demo)" class="w3-container w3-padding-32 w3-card">
+        <p class="w3-text-grey">This data was gathered from the <a id="websitelink" href="https://www.kickstarter.com/"
+            target="_blank">Kickstarter</a> website</p>
+        <h5>Average Percent of Goal Reached</h5>
+        <p class="w3-text-grey">The average percentage of the creator-set goal reached through pledges of money</p>
+        <h5>Average Pledge Per Backer</h5>
+        <p class="w3-text-grey">The average pledge given in a single backing of a project</p>
+        <h5>Average Backers Per Project</h5>
+        <p class="w3-text-grey">The average number of backers of a single project</p>
+        <h5>Total Backings</h5>
+        <p class="w3-text-grey">The total number of backings, or instances of people giving money to a project</p>
+        <p class="w3-text-grey">Note that the total number of human backers may be lower since some people might give
+          money to multiple projects</p>
+        <h5>Average Pledged Per Project</h5>
+        <p class="w3-text-grey">The average amount money given by backers a single project</p>
+        <h5>Total Pledged</h5>
+        <p class="w3-text-grey">The total amount of money pledged to projects</p>
+        <h5>Project Success Rate</h5>
+        <p class="w3-text-grey">The percent of projects that reach their monetary goal</p>
+        <h5>Total Successful Projects</h5>
+        <p class="w3-text-grey">The total number of projects that reach their monetary goal</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-center">
+    <br><br>
+    <p><button class="w3-button w3-black w3-jumbo" id="mapbutton" onclick="mapFunction();">THE MAP</button></p>
+  </div>
+  <br><br>
+
+  <!-- End page content -->
   </div>
 
   <script>
+    //don't send cookies in samesite request for w3
+    document.cookie = "AC-C=ac-c;expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/;SameSite=Lax";
     // Tabbed Menu
     function openMenu(evt, menuName) {
       var i, x, tablinks;
