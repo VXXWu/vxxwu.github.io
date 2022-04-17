@@ -763,7 +763,7 @@
 			document.getElementById("generatebutton").style.display = "none";
 			if (specificPerm != "") {
 				if (categoryPerm == "violentcrime" || categoryPerm == "violentcrimenum" ||
-					categoryPerm == "propertycrime" || categoryPerm == "propertycrime") {
+					categoryPerm == "propertycrime" || categoryPerm == "propertycrimenum") {
 					document.getElementById("year2text").style.display = "block";
 					document.getElementById("year2").style.display = "block";
 					if (document.getElementById("year2").value != "")
@@ -825,9 +825,8 @@
 		function setYear() {
 			document.getElementById("generatebutton").style.display = "none";
 
-			if (categoryPerm == "violentcrime" ||
-				categoryPerm == "violentcrimenum" || categoryPerm == "propertycrime" ||
-				categoryPerm == "propertycrime") {
+			if (categoryPerm == "violentcrime" || categoryPerm == "violentcrimenum" ||
+			 categoryPerm == "propertycrime" || categoryPerm == "propertycrimenum") {
 				yearPerm = document.getElementById("year2").value;
 			}
 			else if (categoryPerm == "finstatus") {
