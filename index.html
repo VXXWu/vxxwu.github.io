@@ -6,21 +6,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap">
   <style>
     body,
     html {
       height: 100%;
-      font-family: "Inconsolata", sans-serif;
+      font-family: "Railway", sans-serif;
     }
 
     .bgimg {
       background-position: center;
-      background-size: auto 95%;
-      /*background-size: cover;*/
+      background-size: auto 100%;
       background-repeat: no-repeat;
       background-image: url("Images/mapScreenshot.png");
       min-height: 100%;
+    }
+
+    .headerButton {
+      width: 14.2857143%;
     }
 
     #mylink,
@@ -55,23 +58,26 @@
   <!-- Links (sit on top) -->
   <div class="w3-top">
     <div class="w3-row w3-padding w3-black">
-      <div class="w3-col s2">
-        <a href="#" class="w3-button w3-block w3-black">HOME</a>
+      <div class="w3-col headerButton">
+        <a href="#" class="w3-button w3-block w3-black" style="margin-top: 10px;">HOME</a>
       </div>
-      <div class="w3-col s2">
-        <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+      <div class="w3-col headerButton">
+        <a href="#about_the_map" class="w3-button w3-block w3-black" style="margin-top: 10px;">ABOUT THE MAP</a>
       </div>
-      <div class="w3-col s2">
-        <a href="#tutorial" class="w3-button w3-block w3-black">TUTORIAL</a>
+      <div class="w3-col headerButton">
+        <a href="#tutorial" class="w3-button w3-block w3-black" style="margin-top: 10px;">TUTORIAL</a>
       </div>
-      <div class="w3-col s2">
-        <a href="#social_demographics" class="w3-button w3-block w3-black">SOCIAL DEMOGRAPHICS</a>
+      <div class="w3-col headerButton">
+        <a href="#social_demographics" class="w3-button w3-block w3-black" style="margin-top: 10px;">SOCIAL DEMOGRAPHICS</a>
       </div>
-      <div class="w3-col s2">
-        <a href="#scientist-gathered_metrics" class="w3-button w3-block w3-black">SCIENTIST-GATHERED METRICS</a>
+      <div class="w3-col headerButton">
+        <a href="#scientist-gathered_metrics" class="w3-button w3-block w3-black">SCIENTIST-GATHERED<br>METRICS</a>
       </div>
-      <div class="w3-col s2">
-        <a href="map.html" class="w3-button w3-block w3-black">THE MAP</a>
+      <div class="w3-col headerButton">
+        <a href="#about_the_creator" class="w3-button w3-block w3-black" style="margin-top: 10px;">ABOUT THE CREATOR</a>
+      </div>
+      <div class="w3-col headerButton">
+        <a href="map.html" class="w3-button w3-block w3-black" style="margin-top: 10px;">THE MAP</a>
       </div>
     </div>
   </div>
@@ -86,36 +92,25 @@
   </header>
 
   <!-- Add a background color and large text to the whole page -->
+
   <div class="w3-sand w3-grayscale w3-large">
 
     <!-- About Container -->
-    <div class="w3-container" id="about">
+    <div class="w3-container" id="about_the_map">
       <div class="w3-content" style="max-width:700px">
-        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE INTERACTIVE MAP</span></h5>
-        <p><span style="background-color: #FFFF00">Social scientists</span> deal with a lot of <span
-            style="background-color: #FFFF00">geographic information</span> that is difficult to intuitively understand,
-          but by utilizing visualization
-          tools like <span style="background-color: #FFFF00">interactive maps</span>, geographic data can be examined in
-          an easily processable format to develop new <span style="background-color: #FFFF00">research questions</span>
-          and see <span style="background-color: #FFFF00">relationships between metrics</span>.</p>
-        <p>This interactive map can display a large dataset of <span style="background-color: #FFFF00"></span>over
-          30</span>
-          different basic <span style="background-color: #FFFF00">social demographic metrics</span>, like sex and
+        <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE MAP</span></h5>
+        <p><b>Social scientists</b> deal with a lot of <b>geographic information</b> that is difficult to intuitively understand,
+          but by utilizing visualization tools like <b>interactive maps</b>, geographic data can be examined in
+          an easily processable format to develop new <b>research questions</b>
+          and see <b>relationships between metrics</b>.</p>
+        <p>This interactive map can display a large dataset of <b>over
+          30</b> different basic <b>social demographic metrics</b>, like sex and
           violent crime rate, that I gathered from various reliable sources, like the <a id="websitelink"
             href="https://www.census.gov/" target="_blank">US Census Bureau</a> and the <a id="websitelink"
             href="https://www.fbi.gov/services/cjis/ucr/publications" target="_blank">FBI UCR</a> (Uniform Crime
-          Reporting Program), and can additionally display a
-          dataset on <span style="background-color: #FFFF00">crowdfunding</span> gathered by a Stanford social scientist
-          and processed by me.
-          All of these metrics are listed below in several categories with some clarifying details. Enjoy!
+          Reporting Program), and can additionally display a dataset on <b>crowdfunding</b> gathered by a Stanford social scientist
+          and processed by me. All of these metrics are listed below in several categories with some clarifying details. Enjoy!
         </p>
-        <h4 class="w3-center"><span class="w3-text-gray w3-wide">ABOUT THE CREATOR</span></h5>
-          <p>Hi there! My name is Vince Wu, and I am a high school freshman who made this map. 
-            I was inspired to create this map by accounts from social scientists of the difficulty of 
-            finding data on many different demographics and the inability to visualize a large amount 
-            of geographic data across multiple years. I hope my map can be an interesting and useful tool 
-            for you to use in visualizing geographic data.
-          </p>
       </div>
     </div>
 
@@ -125,7 +120,7 @@
         <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">TUTORIAL</span></h5>
 
         <div class="w3-col m6 w3-padding-large">
-          <p>1) Choose a <span style="background-color: #FFFF00">general category</span> of data that you want to
+          <p>1) Choose a <b>general category</b> of data that you want to
             visualize</p>
         </div>
         <div class="w3-col m6 w3-padding-large w3-hide-small">
@@ -133,14 +128,14 @@
         </div>
 
         <div class="w3-col m6 w3-padding-large">
-          <p>2) Choose a <span style="background-color: #FFFF00">specific demographic</span> within the category</p>
+          <p>2) Choose a <b>specific demographic</b> within the category</p>
         </div>
         <div class="w3-col m6 w3-padding-large w3-hide-small">
           <img src="Images/tutorialSpecific.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600">
         </div>
 
         <div class="w3-col m6 w3-padding-large">
-          <p>3) Choose a <span style="background-color: #FFFF00">year</span> in which you want to visualize your
+          <p>3) Choose a <b>year</b> in which you want to visualize your
             specific demographic</p>
         </div>
         <div class="w3-col m6 w3-padding-large w3-hide-small">
@@ -148,7 +143,7 @@
         </div>
 
         <div class="w3-col m6 w3-padding-large">
-          <p>4) Click the <span style="background-color: #FFFF00">"Generate Map"</span> button to generate an
+          <p>4) Click the <b>"Generate Map"</b> button to generate an
             interactive map of your chosen demographic in your chosen
             year</p>
         </div>
@@ -157,7 +152,7 @@
         </div>
 
         <div class="w3-col m6 w3-padding-large">
-          <p>You can <span style="background-color: #FFFF00">change</span> the category, specific demographic, or year
+          <p>You can <b>change</b> the category, specific demographic, or year
             at any time</p>
         </div>
         <div class="w3-col m6 w3-padding-large w3-hide-small">
@@ -315,6 +310,8 @@
     </div>
   </div>
 
+  <!--FUTURE PLANS-->
+
   <div class="w3-container" id="scientist-gathered_metrics">
     <div class="w3-content" style="max-width:700px">
       <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">SCIENTIST-GATHERED METRICS</span></h5>
@@ -357,6 +354,19 @@
         <h5>Total Successful Projects</h5>
         <p class="w3-text-grey">The total number of projects that reach their monetary goal</p>
       </div>
+    </div>
+  </div>
+
+  <div class="w3-container" id="about_the_creator">
+    <div class="w3-content" style="max-width:700px">
+      <!--<h5 class="w3-center"><span class="w3-text-gray w3-wide">ABOUT THE CREATOR</span></h5>-->
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ABOUT THE CREATOR</span></h5>
+        <p>Hi there! My name is Vince Wu, and I am a high school freshman who made this map. 
+          I was inspired to create this map by accounts from social scientists of the difficulty of 
+          finding data on many different demographics and the inability to visualize a large amount 
+          of geographic data across multiple years. I hope my map can be an interesting and useful tool 
+          for you to use in visualizing geographic data.
+        </p>
     </div>
   </div>
 
