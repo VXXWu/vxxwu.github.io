@@ -882,15 +882,18 @@
 			//set the color of each state
 			var currentData = new Array(stateNum);
 			var str = STATE_DATA[0][STATE];
-			const firstPulled=parseFloat(str.replaceAll(",", "").replaceAll("$", ""));
+			var firstPulled=parseFloat(str.replaceAll(",", "").replaceAll("$", ""));
+			if (isNaN(firstPulled))
+				firstPulled=0;
 			var large = firstPulled;
 			var small = firstPulled;
 
 			for (var i = 0; i < stateNum; i++) {
 				str = STATE_DATA[i][STATE];
 				currentData[i] = parseFloat(str.replaceAll(",", "").replaceAll("$", ""));
+				//console.log(currentData[i]);
 				if (isNaN(currentData[i])) {
-					currentData[i] = 1;
+					currentData[i] = 0;
 				}
 				if (currentData[i] > large) large = currentData[i];
 				if (currentData[i] < small) small = currentData[i];
