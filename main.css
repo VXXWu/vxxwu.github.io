@@ -32,7 +32,7 @@ h1 {
 #edulevel25-44dropdown,
 #crowdfundingdropdown,
 
-#year1text,
+/*#year1text,
 #year2text,
 #year3text,
 #year4text,
@@ -45,7 +45,11 @@ h1 {
 #year4,
 #year5,
 #year6,
-#year7,
+#year7,*/
+/*
+#yeardisplay,*/
+/*#yearslider,*/
+#yeartext,
 #generatebutton {
   display: none;
   top: 0px;
@@ -59,20 +63,17 @@ h1 {
   position: relative;
 }
 
-
-/*.float-container {
-    border: 3px solid #fff;
-    padding: 20px;
-  }*/
-/*
-.float-child {
-  width: 50%;
-  float: left;
-}*/
+#yearslider {
+  display: none;
+  top: -10px;
+  left: -10px;
+  position: relative;
+}
 
 #us-map {
   position: relative;
-  top: 10;
+  display: block;
+  top: -20;
   /*left: 700;*/
   width: 100%;
   height: 100%;
@@ -109,12 +110,14 @@ circle:hover {
 }
 
 #selector{
-  width: 30%;
+  width: 35%;
+  height: 90%;
   float: left;
 }
 
 #map{
-  width: 70%;
+  width: 65%;
+  height: 90%;
   float: left;
 }
 
@@ -137,4 +140,106 @@ width: 100px;*/
   background-color: rgb(90, 210, 230);
   /* For browsers that do not support gradients */
   background: linear-gradient(to right, rgb(90, 210, 230), rgb(10, 70, 110))
+}
+
+/*range slider*/
+input.range {
+  -webkit-appearance: none;
+  bottom: -10px;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+input.range:focus {
+  outline: 0;
+}
+input.range::-moz-focus-outer {
+  border: 0;
+}
+input.range::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px black, 0px 0px 1px black;
+  border: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7.5px;
+}
+input.range::-moz-range-thumb {
+  box-shadow: 1px 1px 1px black, 0px 0px 1px black;
+  border: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+input.range::-ms-thumb {
+  box-shadow: 1px 1px 1px black, 0px 0px 1px black;
+  border: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  height: 5px;
+}
+input.range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: black;
+  border-radius: 20px;
+  border: 0;
+}
+input.range::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+  background: black;
+  border-radius: 20px;
+  border: 0;
+}
+input.range::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input.range::-ms-fill-lower,
+input.range::-ms-fill-upper {
+  background: black;
+  border: 0;
+  border-radius: 40px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0px 0px 1px rgba(13, 13, 13, 0);
+}
+/*
+.range__tick {
+  fill: #a0a0a0;
+}*/
+.range__tick:first-child {
+  -webkit-transform: translateX(2px);
+  -moz-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  -o-transform: translateX(2px);
+  transform: translateX(2px);
+}
+.range__tick:last-child {
+  -webkit-transform: translateX(-3px);
+  -moz-transform: translateX(-3px);
+  -ms-transform: translateX(-3px);
+  -o-transform: translateX(-3px);
+  transform: translateX(-3px);
+}
+.range__field {
+  border: 0;
 }
